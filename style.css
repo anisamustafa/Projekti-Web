@@ -186,3 +186,83 @@ h1{
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+#main1 {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(215, 116, 29, 0.938)
+}
+
+#main1 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    background-color: #FFE3BB;
+    border: 2px solid #fab958;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+#main1 .content {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; 
+}
+
+#main1 .label {
+    min-width: 80px; 
+    font-weight: bold;
+    color: black;
+}
+
+#main1 .user-input {
+    color: rgba(14, 14, 51, 0.938);
+    flex: 1;
+    word-wrap: break-word;
+}
+
+#main1 .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#main1 button {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(215, 116, 29, 0.938);
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#main1 button:hover {
+    background-color: #f8a529;
+}
+
+#main1 foto {
+    display: flex;
+}
+
+#main1 img{
+    display: flex;
+    float: left;
+    border: none;
+    width: 450px;
+    height: 435px;
+}
+
+#main1 p {
+    display: flex;
+    color: rgba(10, 10, 70, 0.938);
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 10px;
+}
