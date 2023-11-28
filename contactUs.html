@@ -11,7 +11,8 @@
         <a href="index.html" class="logo">
             <img src="Photos/Logo for web.png" alt="Logo">
         </a>
-        <nav class="navbar" >
+        <nav>
+           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About us</a></li>
             <li><a href="menus.html">Menus</a></li>
@@ -22,24 +23,46 @@
         </nav>
     </header>
 </body>
-    <main>
-        <h1>Contact Us</h1>
+
+    <main id="4">
+
+            <div class="contactUs">
+                <br>
+                <br>
+                <br>
+                <h1>We Would Love to Hear From You</h1>
+                
+                <p>Contact us by phone :
+                    <br>
+                    049 - 227 - 076
+                    <br>
+                    049 - 477 - 165
+                    <br>
+                    <br>
+                Contact us by email :
+                    <br>
+                    cozycup@gmail.com
+                </p>
+
+            </div>
+            <form action="process_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+             
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+             
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+             
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+             
+                <input type="submit" value="Submit">
+             </form>
+       
+       
+   
     </main>
-<footer>
-    <div class="footeri">
-        <hr>
-    <a href="https://www.instagram.com/" target="_blank">
-        <img src="Photos/ig-logo.png" alt="Instagram">
-    </a>
 
-    <a href="https://www.facebook.com/" target="_blank">
-        <img src="Photos/fb-logo.png" alt="Facebook">
-    </a>
-
-    <a href="https://twitter.com/i/flow/login" target="_blank">
-        <img src="Photos/x_logo.png" alt="Twitter">
-    </a>
-    
-    </div>
-</footer>
 </html>

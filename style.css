@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
 }
+
 body{
     padding: 0;
     margin: 0;
@@ -35,20 +36,21 @@ nav{
 ul{
     list-style: none;
     margin: 0;
-    padding: 0;
-    overflow: visible;   
+    padding: 0; 
 }
 li{
+    
     float : left;
 }
 li a {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px;
     text-decoration: none;
 }
 li a:hover {
+    border-radius: 8px;
     background-color: brown;
 }
 
@@ -155,7 +157,7 @@ footer{
 
 .footeri{
     display: flexbox;
-    
+   
 }
 
 .footeri img{
@@ -186,3 +188,240 @@ h1{
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Order Online */
+
+#main1 {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgba(215, 116, 29, 0.938)
+}
+
+#main1 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: left;
+    background-color: #FFE3BB;
+    border: 2px solid #fab958;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+#main1 .content {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center; 
+}
+
+#main1 .label {
+    min-width: 80px; 
+    font-weight: bold;
+    color: black;
+}
+
+#main1 .user-input {
+    color: rgba(14, 14, 51, 0.938);
+    flex: 1;
+    word-wrap: break-word;
+}
+
+#main1 .button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#main1 button {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: rgba(215, 116, 29, 0.938);
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#main1 button:hover {
+    background-color: #f8a529;
+}
+
+#main1 foto {
+    display: flex;
+}
+
+#main1 img{
+    display: flex;
+    float: left;
+    border: none;
+    width: 450px;
+    height: 435px;
+}
+
+#main1 p {
+    display: flex;
+    color: rgba(10, 10, 70, 0.938);
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    margin-top: 10px;
+}
+
+
+/*Cozy Store */
+
+#main2 {
+    
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-top: 100px;
+
+}
+.cozyStore_head{
+    margin-top: 100px;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cozyStore_head h1{
+    margin-top: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    color: sienna;
+    text-align: center;
+}
+.cozyStore_head h3{
+    text-align: center;
+    font-size: 30px
+}
+.store_start img{
+    float: left;
+    width: 600px;
+    height: 500px;
+    margin-top: 50px;
+    
+}
+.store_start h3{
+    margin-top: 90px;
+    margin-left: 20px;
+    padding: 12px;
+    width: 700px;
+    height: 500px;
+    text-align: center;
+    float: right;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 29px;
+    color: brown;   
+}
+
+
+    .products .box-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap:1.5rem;
+    }
+    
+    .products .box-container .box{
+        text-align: center;
+        border: #f8a529;
+        padding: 2rem;
+    }
+    
+    .products .box-container .box .icons a{
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        color:black;
+        margin:.3rem;
+    }
+    
+    .products .box-container .box .icons a:hover{
+       color: #fab958;
+    }
+    
+    .products .box-container .box .image{
+        padding: 2.5rem 0;
+    }
+    
+    .products .box-container .box .image img{
+        height: 300px;
+        width: 300px;
+    }
+    
+    .products .box-container .box .content h3{
+        color:black;
+        font-size: 2.5rem;
+    }
+    
+    .products .box-container .box .content .stars{
+        padding: 1.5rem;
+        color: sienna;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
+    
+    .products .box-container .box .content .price{
+        color : black;
+        font-size: 2.5rem;
+    }
+    
+    .products .box-container .box .content .price span{
+        text-decoration: line-through;
+        font-weight: lighter;
+        font-size: 1.5rem;
+    }
+    #addToCartButton{
+        background-color: burlywood;
+        color: saddlebrown;
+        width: 100px;
+        height: 50px;
+        border: 3px solid #fab958;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.6s ease;
+    }
+    #addToCartButton:hover{
+        color: burlywood;
+        background-color: sienna;
+    }
+
+    /*Contact Us */
+
+    .contactUs h1{
+        font-style: italic;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        display: grid;
+        text-align: center;
+        margin-top: 50px;
+        color: black;
+        margin-bottom: 20px;
+       
+    }
+
+    .contactUs p{
+        margin-top: 40px;
+        font-size: 30px;
+        text-align: center;
+    }
+    form {
+        align-items: center;
+        max-width: 500px;
+        margin: auto;
+     }
+     
+     label, input, textarea {
+        display: flex;
+        margin-bottom: 10px;
+     }
+
+
