@@ -32,21 +32,51 @@
             <div class="content">
                 <label for="username"><b>Username:</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
+                <p id="usernameError" class="error"></p>
             </div>
                 
             <div class="content">
                 <label for="password"><b>Password:</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
+                <p id="passwordError" class="error"></p>
             </div>
-        
+            
             <div class="button-container">
-                <button type="submit">Login</button>
+                <button type="button" onclick="validateForm()">Login</button>
+
+                <a href="registration.html" class="register-link">Not registered ?
+                <br>Register here</a> 
             </div>
         </div>
+
+        <script>
+        let usernameRegex = /[a-z]{9,15}$/;
+        let passwordRegex = /^[A-Z][a-z0-9.,\-_]{8,}$/;
+
+        function validateForm(){
+        let usernameInput = document.querySelector('input[name="username"]');
+        let usernameError = document.getElementById('usernameError');
+        let passwordInput = document.querySelector('input[name="password"]');
+        let passwordError = document.getElementById('passwordError');
+
+        usernameError.innerText = '';
+        passwordError.innerText = '';
+
+        if(!usernameRegex.test(usernameInput.value)){
+        usernameError.innerText = 'Invalid username format';
+        return;
+        }
+
+        if(!passwordRegex.test(passwordInput.value)){
+        passwordError.innerText = 'Invalid password format';
+        return;
+        }
+
+        alert('Success');
+        }
+        </script>
     </main>
-
-   <footer>
-
+    <footer>
         <div class="footeri">
             <hr>
         <a href="https://www.instagram.com/" target="_blank">
