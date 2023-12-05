@@ -22,50 +22,186 @@
            </ul>
         </nav>
     </header>
+    
+    
+    <p id="p_menu">
+        Embark on a culinary voyage with our extraordinary menu, where the convergence of original coffee, delectable brunch croissants, bagels,
+        and exquisite cocktails creates a symphony of flavors that will transport you to gastronomic bliss. 
+        Begin your morning with the perfect cup of our meticulously crafted original coffee blends, sourced from the most coveted coffee beans worldwide. 
+        Complementing this liquid gold are our brunch croissants, flaky layers embracing a medley of flavors from savory to sweet, providing a sublime start to your day. 
+        Dive into the irresistible allure of our bagels, handcrafted and freshly baked, offering a canvas for a myriad of delectable toppings and spreads.
+    </p>
+    <h1 id="h1_menu">Menus</h1>
+
+    <div id="slideshow_all">
+        <header>
+        <h2>Our rich menu </h2>
+        <img id="slideshow_menu" />
+        </header>
+        <button class = "button_slideshow"onclick="changeImg()">Next</button>
+    </div>
+    
 
     <main id="main5">
-        <h1>Menus</h1>
-        <div class="coffee">
+        
+        <div class="coffee_menu">
             <h3><b>COFFEE</b></h3>
-            <ul>
-                <li>Espresso->1.2€</li>
-                <li>Double Espresso->2€</li>
-                <li>Americano->2.2€</li>
-                <li>Cappuccino->2.2€</li>
-                <li>Macchiato->2.2€</li>
-                <li>Mocha->2.2€</li>
-                <li>Latte->2.2€</li>
-                <hr>
-                <li>Iced Coffee->3€</li>
-                <li>Iced Frappe->3€</li>
-                <li>Iced Cafe Latte->3.2€</li>
-                <li>Iced Flat White->3.2€</li>
-            </ul>
+            <br>
+            <br>
+            <p>Espresso   ......................................................................1,2€</p>
+            <p>Double Espresso   ........................................................2€</p>
+            <p>Americano   .................................................................2,2€</p>
+            <p>Cappuccino   ..............................................................2,2€</p>
+            <p>Macchiato   .................................................................2,2€</p>
+            <p>Mocha   ..........................................................................2,2€</p>
+            <p>Latte   ..............................................................................2,2€</p>
+            <br>
+                <hr class="coffee_menu_hr">
+            <br>
+            <p>Iced Coffee   ..................................................................3€</p>
+            <p>Iced Frappe   ..................................................................3€</p>
+            <p>Iced Cafe Latte   .......................................................3,5€</p>
+            <p>Iced Flat White   .......................................................3,5€</p>
+           
         </div>
-        <div class="drinks">
+        <div class="drinks_menu">
             <h3><b>DRINKS</b></h3>
-            <ul>
-                <li>Coca-Cola->2€</li>
-                <li>Sprite->2€</li>
-                <li>Iced-Tea->2€</li>
-                <li>Schweppes->2€</li>
-                <li>Red Bull->3€</li>
-                <li>Strawberry->2€</li>
-                <li>Peach->2€</li>
-                <li>Apple->2€</li>
-            </ul>
+            <br>
+            <br>
+            <p>Coca - Cola   .....................................................................2€</p>
+            <p>Sprite   ................................................................................2€</p>
+            <p>Iced - Tea   ........................................................................2€</p>
+            <p>Schweppes   ...................................................................2€</p>
+            <p>Red - Bull    ........................................................................3€</p>
+            <p>Strawberry  .................................................................1,7€</p>
+            <p>Peach  ............................................................................1,7€</p>
+            <p>Apple  .............................................................................1,7€</p>
+        
         </div>
-        <div class="hotdrinks">
+        <div class="hotdrinks_menu">
             <h3><b>HOT DRINKS</b></h3>
-            <ul>
-                <li>Hot Chocolate->2.2€</li>
-                <li>White Chocolate->2.2€</li>
-                <li>Vanila Tea->1.7€</li>
-                <li>Green Tea->1.7€</li>
-                <li>Black Tea->1.7€</li>
-                <li>Mint Tea->1.7€</li>
-            </ul>
+            <br>
+            <br>
+            <p>Hot Chocolate   .............................................................2,2€</p>
+            <p>White Chocolate   .......................................................2,2€</p>
+            <p>Vanila Tea   .......................................................................1,7€</p>
+            <p>Green Tea   .......................................................................1,7€</p>
+            <p>Black Tea   ........................................................................1,7€</p>
+            <p>Mint Tea   ...........................................................................1,7€</p>
+            <p>Matcha Tea   ....................................................................1,7€</p>
+            
         </div>
+
+        
+        <div class="bagels_menu">
+            <h3><b>Bagels</b></h3>
+            <br>
+            <br>
+            <p>Cozy Cup Bagel   ..........................................................2,7€</p>
+            <p>Classic Bagel .............................................................2,5€</p>
+            <p>Cranberry Bagel   ...............................................2,9€</p>
+            <p>French Toast Bagel   ........................................2,7€</p>
+            <!--
+            <p>Cranberry Bagel   .......................................................2,2€</p>
+            <p>Chocolate Chip Bagel   ............................................3,2€</p>
+            <p>French Toast Bagel   ..................................................2,8€</p>
+            -->
+            
+        </div>
+
+        <div class="brunch_menu">
+            <h3><b>Brunch</b></h3>
+            <br>
+            <br>
+            <p>Fried eggs   ...................................................................3,2€</p>
+            <p>Omlette   ........................................................................3.5€</p>
+            <p>Sausages   ....................................................................3,3€</p>
+            <p>French toast   ...............................................................2,4€</p>
+            <p>Mashed potatoes   ....................................................2,2€</p>
+            <p>Smoked Prosciutto slices   ..................................3,9€</p>
+            <br>
+               
+        </div>
+        <div class="sandwhiches_hamburger_menu">
+            <h3><b>Sandwiches  &  Hamburgers</b></h3>
+            <br>
+            <br>
+            <p>Cozy Cup Burger ..................................................1.2€</p>
+            <p>Classic Burger  ....................................2€</p>
+            <p>Cheese Burger   .............................................2.2€</p>
+            <p>Chicker Burger   ..........................................2.2€</p>
+            <p>BBQ Burger   .............................................2.2€</p>
+            <br>
+                <hr class="sandwhiches_hamburger_menu_hr">
+            <br>
+            <p>Cozy Cup Sandwich  .............................................3€</p>
+            <p>Sandwich Club   .............................................3€</p>
+            <p>Chicken Sandwich   ....................................3.5€</p>
+            <p>Cheese Sandwich   ....................................3.5€</p>
+            <br>
+            <hr>
+            <br>
+            <h4>Sides for Both Menus<h4>
+
+                <p class="p_sides">French Fries</p>
+                <p class="p_sides">Sweet Potato Fries</p>
+                <p class="p_sides">Onion Rings</p>
+           
+        </div>
+        <div class="cocktails_menu">
+            <h3><b>Cocktails</b></h3>
+            <br>
+            <br>
+            <p>Home Cocktail ..................................................1.2€</p>
+            <p>Mojito ....................................2€</p>
+            <p>Strawberry Mojito   .............................................2.2€</p>
+            <p>Long Island Ice-Tea..........................................2.2€</p>
+            <p>Pink Lady   .............................................2.2€</p>
+            <p>Blue Lagoon .................................</p>
+
+            <br>
+            <hr>
+            <h3>Appetizeirs</h3>
+            <p>Chicken Fingers</p>
+            <p>Hot - Wings</p>
+            <p></p>
+        
     </main>
+
+    <script>
+        let i = 0;
+        let imgArray = ['Photos/cup.jpg','Photos/aboutus.png',''];
+
+        function changeImg(){
+            document.getElementById('slideshow_menu').src = imgArray[i];
+
+            if(i< imgArray.length -1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("changeImg()", 5000);
+        }
+        document.addEventListener(onload, changeImg());
+    </script>
+
+<footer>
+    <div class="footeri">
+        <hr>
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="Photos/ig-logo.png" alt="Instagram">
+    </a>
+
+    <a href="https://www.facebook.com/" target="_blank">
+        <img src="Photos/fb-logo.png" alt="Facebook">
+    </a>
+
+    <a href="https://twitter.com/i/flow/login" target="_blank">
+        <img src="Photos/x_logo.png" alt="Twitter">
+    </a>
+    
+    </div>
+</footer>
 </body>
 </html>

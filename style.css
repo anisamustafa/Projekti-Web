@@ -10,6 +10,7 @@ body{
     font-family: 'Arial', sans-serif;
 }
 
+
 .header{
     position: fixed;
     width: 100%;
@@ -17,7 +18,7 @@ body{
     left: 0;
     top: 0;
     padding: 10px ;
-    background-color: whitesmoke;
+    background-color:  whitesmoke;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +103,7 @@ li a:hover {
     color: brown;   
 }
 
-.contactus img{
+.contactus_fp img{
     float: right;
     margin-top: 50px;
     width: 700px;
@@ -198,6 +199,9 @@ h1{
     margin: 0;
     background-color: rgb(164, 96, 37);
 }
+.orderOnline_p{
+    padding: 10px;
+}
 
 #main1 .form {
     display: flex;
@@ -210,6 +214,7 @@ h1{
     padding: 20px;
     width: 300px;
     margin-top: 50px;
+    padding: 40px;
 }
 
 #main1 .content {
@@ -218,16 +223,18 @@ h1{
     align-items: center; 
 }
 
-#main1 .label {
+#main1 .login_form {
     min-width: 80px; 
     font-weight: bold;
-    color: black;
 }
 
-#main1 .user-input {
-    color: rgba(14, 14, 51, 0.938);
+#main1 .login_form_input {
+    color: black;
     flex: 1;
     word-wrap: break-word;
+    border: 2px solid ;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #main1 .button-container {
@@ -236,31 +243,93 @@ h1{
 }
 
 #main1 button {
-    padding: 10px;
+    padding: 12px;
     font-size: 12px;
     font-weight: bold;
     color: rgb(164, 96, 37);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #main1 button:hover {
     background-color: #f8a529;
+    transition: 0.5s ease;
 }
 
 #main1 a{
-    color: black;
+    color: sienna;
+    padding: 10px;
     font-style: italic;
     text-decoration: none;
-    border: 1px solid black;
+    border: 1px solid  rgb(164, 96, 37);
     border-width: thin;
     border-radius: 10px; 
-}
-.register-link  {
-    display: block;
+    font-size: 12px;
     margin-top: 10px;
-}  
+    background-color: whitesmoke;
+    text-align: center;
+    
+    
+}
+#main1 a:hover{
+    background-color: #f8a529;
+    transition: 0.5s ease;
+}
+
+
+
+/* Register Form ---------------*/
+
+.register_form{
+    margin-top: 150px;
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin-left: 300px;
+    background-color: burlywood;
+}
+.register_input{
+    color: black;
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+.register_p{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.register_content{
+    margin-top: 20px;
+    color: brown    ;
+   
+}
+.register_form button{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 10px;
+    height: 50px;
+    color: black;
+    border-radius: 10px;
+    border: 2px solid gray;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+.register_form button:hover{
+    color: gray;
+    transition: 1s ease;
+}
+
+
 
 #main1 .foto {
     display: flex;
@@ -477,8 +546,301 @@ h1{
     background-color: darkslategray;
 }
 
-#main5 {
-    margin: 0;
-    padding: 0;
+/* Menus -------------------------------------------------*/
+#p_menu{
+    margin-top: 100px;
 }
+
+#h1_menu{
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+#main5{
+    background-color: peru;
+    padding: 0%;
+    margin: 0;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 968px
+    height: 100%;
+
+}
+#h1_menu {
+    font-style: italic;
+    text-align: center;
+    color: black;
+}
+#main5 .coffee_menu {
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    display: flexbox;
+    width: 400px;
+    align-content: flex-start;
+}
+.coffee_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+.coffee_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+.coffee_menu_hr{
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 320px;
+}
+#main5 .drinks_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 400px;
+    align-content: center;
+}
+.drinks_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+.drinks_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+#main5 .hotdrinks_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    
+    border-radius: 40px;
+    width: 400px;
+    align-content: flex-end;
+}
+
+#main5 .hotdrinks_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#main5 .hotdrinks_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+/* Food Menu */
+#main5 .bagels_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 400px;
+    align-content: flex-end;
+
+}
+#main5 .bagels_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#main5 .bagels_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+#main5 .brunch_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 400px;
+    align-content: flex-end;
+
+}
+#main5 .brunch_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#main5 .brunch_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+#main5 .sandwhiches_hamburger_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 400px;
+    align-content: flex-end;
+
+}
+#main5 .sandwhiches_hamburger_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#main5 .sandwhiches_hamburger_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+#main5 .sandwhiches_hamburger_menu h4{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#main5 .sandwhiches_hamburger_menu .p_sides{
+    font-size: 15px;
+    text-align: start;
+    margin: 10px;
+}
+#p_menu{
+    color: #744d25;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#main5 .cocktails_menu{
+    margin-top: 20px;
+    background-color: burlywood;
+    border: 1px solid black;
+    border-radius: 40px;
+    width: 400px;
+    align-content: flex-end;
+
+}
+#main5 .cocktails_menu h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+#main5 .cocktails_menu p{
+    margin: 10px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+}
+
+/* SLider of Menu  ----------------- */ 
+
+#slideshow_all {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI light', Tahoma;
+    width: 500px;
+    margin:0 auto;
+}
+#slideshow_all img {
+    max-width: 700px;
+    height: 300px;
+}
+.button_slideshow{
+    border-radius: 100%;
+    border-style: inherit;
+    width: 40px;
+    height: 40px;
+    font: 10pt;
+}
+.button_slideshow:hover{
+    background-color: rebeccapurple;
+}
+
+
+/* About Us --------------------------------*/
+#main6 .about_us{
+    width: 100%;
+    margin-top: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+
+}
+#main6 h2{
+    text-align: center;
+    font-size: 50px;
+    color: gray;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#main6 h4{
+    text-align: center;
+    color: darkgray;
+    font-size: 30px;
+
+}
+#main6 .p_about_us1{
+    font-size: 20px;
+    color: #744d25;
+    text-align: center;
+    width: 600px;
+    
+}
+#main6 .about_us_imgs{
+    display: flex;
+    justify-content: space-evenly;
+}
+#main6 .about_us_imgs img{
+    width: 600px;
+    height: 500px;
+}
+
+#main6 .about_us_part2{
+    width: 100%;
+    margin-top: 100px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+}
+#main6 h2{
+    text-align: center;
+    font-size: 50px;
+    color: gray;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#main6 h4{
+    text-align: center;
+    color: darkgray;
+    font-size: 30px;
+}
+#main6 .p_about_us2{
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
     
