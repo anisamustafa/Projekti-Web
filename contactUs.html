@@ -53,20 +53,24 @@
         <form class="contactUs_form" action="#" method="post">
             <label class="contactUs_label" for="name">Name - <i>Required</i></label>
             <input class="contactUs_input" type = "text id="name" name="name" required>
+            <p id="nameError" class="error"></p>
 
             <label class="contactUs_label" for="email">Email - <i>Required</i></label>
             <input class="contactUs_input" type="email" id="email" name="email" required>
+            <p id="emailError" class="error"></p>
 
             <label class="contactUs_label" for="phone">Phone Number - <i>Required</i></label>
             <input class="contactUs_input" type="tel" id="phone" name="phone" required>
+            <p id="numberError" class="error"></p>
 
             <label class="contactUs_label" for="reason">What are you getting in touch about ? - <i>Optional</i></label>
             <input class="contactUs_input" type="text" id="reason" name="reason">
 
             <label class="contactUs_label" for="message">Your Message - <i>Required</i></label>
             <textarea class="contactUs_textarea" id="message" name="message" rows="4" required></textarea>
-
-            <button class="button_form" type="submit">Submit</button>
+                <div class="button-container">
+                    <button type="button" onclick="validate_contact_Form()">Submit</button>
+        </div>
         </form>
     </div>
 </main>
@@ -87,5 +91,46 @@
     
     </div>
 </footer>
+<script>
+    let nameRegex = /[a-z]{9,15}$/;
+    let numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+    let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    
+    function validate_contact_Form(){
+        let nameInput = document.querySelector('input[name = "name"]');
+        let nameError = document.getElementById('nameError');
+
+        let emailInput = document.querySelector('input[email = "email"]');
+        let emailError = document.getElementById('emailError');
+
+        let numberInput = document.querySelector('input[phone = "phone"]');
+        let numberError = document.getElementById('numberError');
+     
+        
+
+        nameError.innerText = '';
+        numberError.innerText = '';
+        emailError.innerText = '';
+
+
+if(!nameRegex.test(nameInput.value)){
+nameError.innerText = 'Invalid name format';
+return;
+}
+
+if(!numberRegex.test(surnameInput.value)){
+surnameError.innerText = 'Invalid phone number format';
+return;
+}
+
+if(!emailRegex.test(emailInput.value)){
+emailError.innerText = 'Invalid email format';
+return;
+}
+
+alert('Message sent');
+}
+    
+</script>
 </body>
 </html>

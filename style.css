@@ -133,10 +133,13 @@ li a:hover {
     color: slategray;
 }
 footer{
+    margin-top: 20px;
     text-align: center;
-    margin-top: 40px;
+  
 }
-
+.footeri{
+    padding: 5px;
+}
 .footeri hr{
     border: 1px solid black;
     border-style: groove;
@@ -546,12 +549,10 @@ h1{
     background-color: darkslategray;
 }
 
-<<<<<<< HEAD
-/* Menus -------------------------------------------------*/
-=======
+
 /*Menus*/
 
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
+
 #p_menu{
     margin-top: 100px;
 }
@@ -561,10 +562,6 @@ h1{
     color: black;
     text-align: center;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #main5{
     background-color: peru;
     padding: 0%;
@@ -573,26 +570,15 @@ h1{
     margin-top: 20px;
     justify-content: space-evenly;
     flex-wrap: wrap;
-<<<<<<< HEAD
     width: 968px
     height: 100%;
 
 }
-=======
-    width: 968px;
-    height: 100%;
-}
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #h1_menu {
     font-style: italic;
     text-align: center;
     color: black;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #main5 .coffee_menu {
     margin-top: 20px;
     background-color: burlywood;
@@ -602,38 +588,22 @@ h1{
     width: 400px;
     align-content: flex-start;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 .coffee_menu h3{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 25px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 .coffee_menu p{
     margin: 10px;
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 .coffee_menu_hr{
     margin-left: 30px;
     margin-right: 30px;
     width: 320px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #main5 .drinks_menu{
     margin-top: 20px;
     background-color: burlywood;
@@ -642,34 +612,21 @@ h1{
     width: 400px;
     align-content: center;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 .drinks_menu h3{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     font-size: 25px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 .drinks_menu p{
     margin: 10px;
     font-size: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: italic;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #main5 .hotdrinks_menu{
     margin-top: 20px;
     background-color: burlywood;
     border: 1px solid black;
-<<<<<<< HEAD
     
     border-radius: 40px;
     width: 400px;
@@ -816,6 +773,7 @@ h1{
 }
 
 
+
 /* About Us --------------------------------*/
 #main6 .about_us{
     width: 100%;
@@ -880,21 +838,6 @@ h1{
     font-size: 20px;
     color: black;
     width: 600px;
-}
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
-    
     border-radius: 40px;
     width: 400px;
     align-content: flex-end;

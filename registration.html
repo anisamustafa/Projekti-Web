@@ -53,14 +53,14 @@
                 <p id="passwordError" class="error"></p>
             </div>
             <div class="button-container">
-                <button type="button" onclick="RegisterForm()">Register</button>
+                <button type="button" onclick="validateForm()">Login</button>
 
-
+            </div>
         </div>
 
         <script>
             let nameRegex = /[a-z]{9,15}$/;
-            let surnameReges = /[a-z]{9,15}$/;
+            let surnameRegex = /[a-z]{9,15}$/;
             let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
             let passwordRegex = /^[A-Z][a-z0-9.,\-_]{8,}$/;
 
@@ -97,7 +97,6 @@
         emailError.innerText = 'Invalid email format';
         return;
         }
-
 
         if(!passwordRegex.test(passwordInput.value)){
         passwordError.innerText = 'Invalid password format';
