@@ -24,7 +24,7 @@
     </header>
 
 
-<main id="4">
+<main id="main4">
 
     <div class="contactUs">
         <br>
@@ -49,88 +49,141 @@
         </p>
 
     </div>
-    <div class="contactUs">
-        <form class="contactUs_form" action="#" method="post">
-            <label class="contactUs_label" for="name">Name - <i>Required</i></label>
-            <input class="contactUs_input" type = "text id="name" name="name" required>
+   
+    <div class="contact_form">
+      
+            <br>
+        </p>
+        <div class="contact_content">
+            <label class="contactUs_label" for="name"><b>Name :</b><br><br></label>
+            <input class="contactUs_input" type="text" placeholder="Enter Name" name="name" required>
             <p id="nameError" class="error"></p>
-
-            <label class="contactUs_label" for="email">Email - <i>Required</i></label>
-            <input class="contactUs_input" type="email" id="email" name="email" required>
-            <p id="emailError" class="error"></p>
-
-            <label class="contactUs_label" for="phone">Phone Number - <i>Required</i></label>
-            <input class="contactUs_input" type="tel" id="phone" name="phone" required>
-            <p id="numberError" class="error"></p>
-
-            <label class="contactUs_label" for="reason">What are you getting in touch about ? - <i>Optional</i></label>
-            <input class="contactUs_input" type="text" id="reason" name="reason">
-
-            <label class="contactUs_label" for="message">Your Message - <i>Required</i></label>
-            <textarea class="contactUs_textarea" id="message" name="message" rows="4" required></textarea>
-                <div class="button-container">
-                    <button type="button" onclick="validate_contact_Form()">Submit</button>
         </div>
-        </form>
-    </div>
-</main>
-<footer>
-    <div class="footeri">
-        <hr>
-    <a href="https://www.instagram.com/" target="_blank">
-        <img src="Photos/ig-logo.png" alt="Instagram">
-    </a>
 
-    <a href="https://www.facebook.com/" target="_blank">
-        <img src="Photos/fb-logo.png" alt="Facebook">
-    </a>
+        <div class="contact_content">
+            <label class="contactUs_label" for="name"><b>Surname :</b><br><br></label>
+            <input class="contactUs_input" type="text" placeholder="Enter Surname" name="surname" required>
+            <p id="surnameError" class="error"></p>
+        </div>
 
-    <a href="https://twitter.com/i/flow/login" target="_blank">
-        <img src="Photos/x_logo.png" alt="Twitter">
-    </a>
-    
-    </div>
-</footer>
-<script>
-    let nameRegex = /[a-z]{9,15}$/;
-    let numberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
-    let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    
-    function validate_contact_Form(){
-        let nameInput = document.querySelector('input[name = "name"]');
-        let nameError = document.getElementById('nameError');
+        <div class="register_content">
+            <label class ="contactUs_label "for="Email"><b>Email : </b><br><br></label>
+            <input class="contactUs_input"  type="email" placeholder="Enter Email" name="email" required>
+            <p id="emailError" class="error"></p>
+        </div>
 
-        let emailInput = document.querySelector('input[email = "email"]');
-        let emailError = document.getElementById('emailError');
+        <div class="contact_content">
+            <label class="contactUs_label" for="name">What are you getting in touch about ? <b></b><br><br></label>
+            <input class="contactUs_input" type="text" placeholder="Enter topic" name="name">
+            <p></p>
+        </div>
 
-        let numberInput = document.querySelector('input[phone = "phone"]');
-        let numberError = document.getElementById('numberError');
-     
+        <div class="contact_content">
+            <label class="contactUs_label" for="name">Your Message : <b></b><br><br></label>
+            <textarea class="contactUs_input" name="message" rows="4" cols="50"  = "Your Message"required></textarea>
+            <p></p>
+        </div>
+
+
+  
         
 
-        nameError.innerText = '';
-        numberError.innerText = '';
-        emailError.innerText = '';
+        <div class="button-container">
+            <button class = "button_form"="button" onclick="contactForm()">Send</button>
+        </div>
+
+    </div>
+
+    <script>
+    let nameRegex = /^[a-zA-Z]{4,15}$/;
+    let surnameRegex = /^[a-zA-Z]{4,15}$/;
+    let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+ 
 
 
-if(!nameRegex.test(nameInput.value)){
-nameError.innerText = 'Invalid name format';
-return;
+    function contactForm() {
+    let nameInput = document.querySelector('input[name="name"]');
+    let nameError = document.getElementById('nameError');
+
+    let surnameInput = document.querySelector('input[name="surname"]');
+    let surnameError = document.getElementById('surnameError');
+
+    let emailInput = document.querySelector('input[name="email"]');
+    let emailError = document.getElementById('emailError');
+
+nameError.innerText = '';
+surnameError.innerText = '';
+emailError.innerText = '';
+
+
+        if (!nameRegex.test(nameInput.value)) {
+            nameError.innerText = 'Invalid name format';
+            return;
+        }
+
+        if (!surnameRegex.test(surnameInput.value)) {
+            surnameError.innerText = 'Invalid surname format';
+            return;
+        }
+
+        if (!emailRegex.test(emailInput.value)) {
+            emailError.innerText = 'Invalid email format';
+            return;
+        }
+
+
+    alert('The message is sent! Thank you');
 }
+        
+    </script>
 
-if(!numberRegex.test(surnameInput.value)){
-surnameError.innerText = 'Invalid phone number format';
-return;
-}
+<footer class="cafe-footer">
+    <div class="container_f">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>40000 , Mitrovica</p>
+          <br>
+          <p><b>Email</b> <br>
+            cozycup@gmail.com</p>
+            <br>
+          <p><b>Phone </b><br>
+             049 - 227 - 076 <br>
+             049 - 477 - 165</p>
+        </div>
+        
+        <div class="footer-section">
+            
+          <h3>Opening Hours</h3>
+          <br>
+          <p><b>Monday - Friday </b><br>
+            8:00 AM - 10:00 PM</p>
+            <br>
+          <p><b>Saturday - Sunday</b> <br>
+            8:00 AM - 00:00 PM</p>
+        </div>
 
-if(!emailRegex.test(emailInput.value)){
-emailError.innerText = 'Invalid email format';
-return;
-}
-
-alert('Message sent');
-}
+        <div class="footer-section_icons">
+            
+          <h3>Follow Us</h3>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img src="Photos/ig.png" alt="Instagram">
+        </a>
     
-</script>
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="Photos/fb_.png" alt="Facebook">
+        </a>
+    
+        <a href="https://twitter.com/i/flow/login" target="_blank">
+            <img src="Photos/x.png" alt="Twitter">
+        </a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 Cozy Cup. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

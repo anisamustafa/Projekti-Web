@@ -132,42 +132,56 @@ li a:hover {
     font-size: 22px;
     color: slategray;
 }
-footer{
-    margin-top: 20px;
-    text-align: center;
+/*Footer */
+.container_f {
+    width: 85%;
+    margin: 0 auto;
+  }
   
+.cafe-footer {
+    margin-top: 10px;
+    background-color: #dfbf9f ;
+    color: #fff;
+    padding: 20px 0;
 }
-.footeri{
-    padding: 5px;
+  
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.footeri hr{
-    border: 1px solid black;
-    border-style: groove;
+  
+.footer-section {
+    flex: 1;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-
-h1{
-    color: purple;
-    
+  
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
-
-footer{
-    text-align: center;
-    margin-top: 40px;
+.footer-section_icons h3{
+    margin-left: 50px;
 }
-
-.footeri hr{
-    border: 1px solid black;
-}
-
-.footeri{
-    display: flexbox;
-   
-}
-
-.footeri img{
-    border-radius: 20px;
-    height: 40px;
+  
+.footer-section_icons img{
+    margin-top: 50px;
+    padding: 10px;
     width: 40px;
+    height: 40px;
+}
+  
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+  
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8em;
 }
 
 h1{
@@ -175,8 +189,7 @@ h1{
     
 }
 .end-talk{
-    border: 1px solid black;
-    background-color: brown;
+    background-color: ;
     
 }
 .end-talk h1{
@@ -187,6 +200,7 @@ h1{
 }
 .end-talk p{
     margin-top: 50px;
+    margin-bottom: 50px;
     text-align: center;
     color: darkgray;
     font-size: 25px;
@@ -211,9 +225,10 @@ h1{
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
-    background-color: #FFE3BB;
+    background-color: burlywood;
     border: 2px solid #fab958;
     border-radius: 20px;
+    margin-left: 100px;
     padding: 20px;
     width: 300px;
     margin-top: 50px;
@@ -280,67 +295,13 @@ h1{
     background-color: #f8a529;
     transition: 0.5s ease;
 }
-
-
-
-/* Register Form ---------------*/
-
-.register_form{
-    margin-top: 150px;
-    height: 500px;
-    display: grid;
-    align-items: center;
-    justify-content: space-around;
-    width: 700px;
-    border: 2px solid black;
-    border-radius: 30px;
-    margin-left: 300px;
-    background-color: burlywood;
-}
-.register_input{
-    color: black;
-    width: 300px;
-    height: 30px;
-    border-radius: 12px;
-}
-
-.register_p{
-    text-align: center;
-    font-size: 30px;
-    font-style: italic;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.register_content{
-    margin-top: 20px;
-    color: brown    ;
-   
-}
-.register_form button{
-    margin-left: 120px;
-    margin-right: 120px;
-    margin-top: 10px;
-    height: 50px;
-    color: black;
-    border-radius: 10px;
-    border: 2px solid gray;
-    font-size: 20px;
-    padding: 10px;
-    
-}
-.register_form button:hover{
-    color: gray;
-    transition: 1s ease;
-}
-
-
-
 #main1 .foto {
     display: flex;
     align-items: center;
 }
 
 #main1 .foto img{
-    max-width: 100%;
+    width: 100%;
     margin-right: 20px;
     width: 385px;
     height: 435px;
@@ -349,12 +310,104 @@ h1{
 #main1 .foto p {
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
+    width: 150px;
     color: rgba(10, 10, 70, 0.938);
     font-size: 30px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: left;
     margin-top: 10px;
 }
+
+
+
+
+/* Register Form ---------------*/
+
+#main7 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-color: rgb(164, 96, 37);
+
+}
+#main7 .register_form{
+    
+    margin-top: 150px;
+    height: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: space-around;
+    width: 450px;
+    border: 2px solid #fab958;
+    border-radius: 30px;
+    margin-left: 100px;
+    background-color: burlywood;
+    margin-bottom: 20px;
+}
+#main7 .register_input{
+    color: black;
+    width: 300px;
+    height: 30px;
+    border-radius: 12px;
+}
+
+#main7 .register_p{
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#main7 .register_content{
+    margin-top: 20px;
+    color: black    ;
+   
+}
+#main7 .register_form button{
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 10px;
+    height: 30px;
+    width: 100px;
+    color: rgb(164, 96, 37);
+    border: 1px solid  rgb(164, 96, 37);
+    border-width: thin;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 2px;
+    
+}
+#main7 .register_form button:hover{
+    background-color: #f8a529;
+    transition: 0.5s ease;
+}
+#main7 .foto {
+    display: flex;
+    align-items: center;
+}
+
+#main7 .foto img{
+    width: 100%;
+    margin-right: 20px;
+    width: 385px;
+    height: 300px
+    margin-top : 200px;
+}
+
+#main7 .foto p {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    color: rgba(10, 10, 70, 0.938);
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+}
+
+
 
 /*Cozy Store */
 
@@ -484,7 +537,7 @@ h1{
 
 /*Contact Us */
 
-.contactUs h1{
+#main4 .contactUs h1{
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: grid;
@@ -494,17 +547,17 @@ h1{
     margin-bottom: 20px;   
     }
 
-    .contactUs p{
+#main4 .contactUs p{
     margin-top: 40px;
     font-size: 30px;
     text-align: center;
     }
    
-.contactUs p01{
+#main4 .contactUs p01{
     font-size: ;
 }
     
-.contactus {
+#main4 .contactus {
     width: 500px;
     background-color: #fff;
     padding: 20px;
@@ -512,20 +565,20 @@ h1{
        
 }
     
-.contactUs_form {
+#main4 .contact_form {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
     
-.contactUs_label {
+#main4 .contactUs_label {
     color: gray;
     width: 650px;
     margin-top: 10px;
     margin-bottom: 8px;
 }
     
-.contactUs_textarea, .contactUs_input {  
+#main4 .contactUs_textarea, .contactUs_input {  
     width: 650px;       
     padding: 8px;
     margin-bottom: 16px;
@@ -533,7 +586,7 @@ h1{
     border-color: wheat;
 }
     
-.button_form {
+#main4 .button_form {
     border-radius: 40px;
     background-color: sienna;
     color: whitesmoke;
@@ -544,15 +597,17 @@ h1{
     cursor: pointer;
 }
     
-.button_form:hover {
+#main4 .button_form:hover {
     transition: 1s;
-    background-color: darkslategray;
+    background-color: #f8a529;
 }
 
-
+<<<<<<< HEAD
+/* Menus -------------------------------------------------*/
+=======
 /*Menus*/
 
-
+>>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
 #p_menu{
     margin-top: 100px;
 }
@@ -773,7 +828,6 @@ h1{
 }
 
 
-
 /* About Us --------------------------------*/
 #main6 .about_us{
     width: 100%;
@@ -838,6 +892,21 @@ h1{
     font-size: 20px;
     color: black;
     width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> 0c1ea81f25fe393150ab82d0fdddafb4dd32effd
+    
     border-radius: 40px;
     width: 400px;
     align-content: flex-end;
