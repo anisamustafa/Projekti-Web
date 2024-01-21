@@ -18,7 +18,7 @@ body{
     left: 0;
     top: 0;
     padding: 10px ;
-    background-color:  whitesmoke;
+    background-color:  white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -613,166 +613,6 @@ h1{
 #p_menu{
     margin-top: 120px;
 }
-
-#h1_menu{
-    margin-top: 50px;
-    color: black;
-    text-align: center;
-}
-#main5{
-    background-color: peru;
-    padding: 0%;
-    margin: 0;
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 968px
-    height: 100px;
-
-}
-#h1_menu {
-    font-style: italic;
-    text-align: center;
-    color: black;
-}
-#main5 .coffee_menu {
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    display: flexbox;
-    width: 400px;
-    align-content: flex-start;
-}
-.coffee_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-.coffee_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-.coffee_menu_hr{
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 320px;
-}
-#main5 .drinks_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: center;
-}
-.drinks_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-.drinks_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-#main5 .hotdrinks_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-}
-
-#main5 .hotdrinks_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-#main5 .hotdrinks_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-/* Food Menu */
-#main5 .bagels_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-
-}
-#main5 .bagels_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-#main5 .bagels_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-
-#main5 .brunch_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-
-}
-#main5 .brunch_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-#main5 .brunch_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-
-#main5 .sandwhiches_hamburger_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-
-}
-#main5 .sandwhiches_hamburger_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-#main5 .sandwhiches_hamburger_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-#main5 .sandwhiches_hamburger_menu h4{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-#main5 .sandwhiches_hamburger_menu .p_sides{
-    font-size: 15px;
-    text-align: start;
-    margin: 10px;
-}
 #p_menu{
     color: #744d25;
     font-size: 25px;
@@ -782,204 +622,171 @@ h1{
     
 }
 
-#main5 .cocktails_menu{
+#h1_menu{
+    margin-top: 50px;
+    color: black;
+    text-align: center;
+}
+#main5{
+    background-color: whitesmoke;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
     margin-top: 20px;
-    background-color: burlywood;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 968px
+    height: 100px;
+    box-sizing:border-box;
+
+}
+#h1_menu {
+    font-style: italic;
+    text-align: center;
+    color: black;
+}
+#main5 .menu {
+    margin-top: 20px;
+    background-color: gainsboro;
     border: 1px solid black;
     border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-
-}
-#main5 .cocktails_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 1000px;
     text-align: center;
-    font-size: 25px;
 }
-#main5 .cocktails_menu p{
-    margin: 10px;
-    font-size: 20px;
+
+#main5 .menu_name {
+    padding: 1em;
+}
+
+#main5 .start_h3 {
+    color: burlywood;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
+    font-size: 25px;
+    margin-top: 30px;
 }
 
-/* SLider of Menu  ----------------- */ 
+#main5 .items_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-#slideshow_all {
-    display: flex ;
+#main5 .menu_item {
+    width: 40%;
+    margin: 20px;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    font-family: 'Segoe UI light', Tahoma;
-    width: 500px;
-    margin:0 auto;
-}
-#slideshow_all img {
-    max-width: 700px;
-    height: 300px;
-}
-.button_slideshow{
-    border-radius: 100%;
-    border-style: inherit;
-    width: 40px;
-    height: 40px;
-    font: 10pt;
-}
-.button_slideshow:hover{
-    background-color: rebeccapurple;
 }
 
-#main5 .hotdrinks_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
+#main5 .item-info {
+    padding: 1em;
+    text-align: left;
 }
 
-#main5 .hotdrinks_menu p{
-    margin: 10px;
+#main5 .item_name {
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 5px;
     font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-
-/* Food Menu */
-
-#main5 .bagels_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-}
-
-#main5 .bagels_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    font-size: 25px;
 }
 
-#main5 .bagels_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
+#main5 .item_price {
+    font-size: 22px;
+    color: black;
+    float: right;
 }
 
-#main5 .brunch_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-}
-
-#main5 .brunch_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-
-#main5 .brunch_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-
-#main5 .sandwhiches_hamburger_menu{
-    margin-top: 20px;
-    background-color: burlywood;
-    border: 1px solid black;
-    border-radius: 40px;
-    width: 400px;
-    align-content: flex-end;
-
-}
-
-#main5 .sandwhiches_hamburger_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
-    font-size: 25px;
-}
-
-#main5 .sandwhiches_hamburger_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
-}
-
-#main5 .sandwhiches_hamburger_menu h4{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-#main5 .sandwhiches_hamburger_menu .p_sides{
+#main5 .item_p {
+    margin-top: 10px;
+    color: #777;
     font-size: 15px;
-    text-align: start;
-    margin: 10px;
-}
-
-#p_menu{
-    color: #744d25;
-    font-size: 25px;
-    text-align: center;
-    font-style: italic;
-    font-family: 'Courier New', Courier, monospace;  
 }
 
 #main5 .cocktails_menu{
     margin-top: 20px;
-    background-color: burlywood;
+    background-color: gainsboro;
     border: 1px solid black;
     border-radius: 40px;
-    width: 400px;
+    width: 700px;
     align-content: flex-end;
-}
 
-#main5 .cocktails_menu h3{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.start_h3{
     text-align: center;
-    font-size: 25px;
 }
 
-#main5 .cocktails_menu p{
-    margin: 10px;
-    font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-style: italic;
+#main5 .slider-wrapper .image-list {
+    display: grid;
+    gap: 14px;
+    font-size: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    grid-template-columns:repeat(7,1fr);
 }
 
-/* SLider of Menu  ----------------- */ 
+#main5 .slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
 
-#slideshow_all {
-    display: flex ;
-    flex-direction: column;
-    justify-content: center;
+#main5 .slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 60%;
+}
+
+#main5 .container{
+    max-width: 1200px;
+    width: 100%;
+}
+
+#main5 .container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
     align-items: center;
-    font-family: 'Segoe UI light', Tahoma;
-    width: 500px;
-    margin:0 auto;
 }
 
-#slideshow_all img {
-    max-width: 700px;
-    height: 300px;
+#main5 .slider-scrollbar .scrollbar-track{
+    height: 2px;
+    width: 100%;
+    position: relative;
+    border-radius: 4px;
 }
 
-.button_slideshow{
-    border-radius: 100%;
-    border-style: inherit;
-    width: 40px;
-    height: 40px;
-    font: 10pt;
+#main5 .slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
 }
 
-.button_slideshow:hover{
-    background-color: rebeccapurple;
+#main5 .slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #000;
+    border-radius: inherit;
+    cursor:grab;
 }
+
+#main5 .slider-scrollbar .scrollbar-track:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;   
+}
+
+#main5 .slider-scrollbar .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+
 
 /* About Us --------------------------------*/
 #main6 .about_us{
@@ -1052,3 +859,201 @@ h1{
     width: 400px;
     align-content: flex-end;
 }
+ 
+
+
+
+
+@media all (max-width: 1536px) {
+ .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+    font-size: 21px;
+ }
+    .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+    .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+    .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+    .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+    .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+    .foto ,.register_form , .register_p , .register_content , 
+    .foto, .form , .content , .button-container {
+
+        font-size: 21px;
+    }
+    
+    .footer-section, .footer-section_icons{
+        font-size: 21px;
+    }
+
+}
+
+@media all (max-width: 1280px) {
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 20px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 20px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 20px;
+        }
+    
+    }
+@media all (max-width: 1024px) {
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 19px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 19px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 19px;
+        }
+    
+    }
+
+
+
+@media all (max-width: 768px) {
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 18px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 18px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 18px;
+        }
+    
+    }
+  
+
+
+@media all (max-width: 640px) {
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 14px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 14px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 14px;
+        }
+    
+    }
+    
+
+@media all (max-width: 475px) {
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 12px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 12px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 12px;
+        }
+    
+    }
+
+@media all (max-width: 415px){
+    .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+        font-size: 9px;
+     }
+        .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+        .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+        .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+        .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+        .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+        .foto ,.register_form , .register_p , .register_content , 
+        .foto, .form , .content , .button-container {
+    
+            font-size: 9px;
+        }
+        
+        .footer-section, .footer-section_icons{
+            font-size: 9px;
+        }
+    
+    }
+@media all (max-width: 350px){
+        .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+            font-size: 6px;
+         }
+            .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+            .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+            .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+            .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+            .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+            .foto ,.register_form , .register_p , .register_content , 
+            .foto, .form , .content , .button-container {
+        
+                font-size: 6px;
+            }
+            
+            .footer-section, .footer-section_icons{
+                font-size: 6px;
+            }
+        
+        }
+
+@media all (max-width: 250px){
+            .header , #main5 , #main2 ,#main3 , #main4 , #main6 ,#main1 ,#main7{
+                font-size: 4px;
+             }
+                .firstpage , .paragraf , .contactus_fp , .cafe-footer,
+                .menu, .menu_name, .items_container, .menu_item, .cocktails_menu ,
+                .store_start, .products, .heading, .box, .content, .stars, .price, #addToCartButton,
+                .about_us , .p_about_us1, .about_us_imgs,.about_us_part2 ,.p_about_us2,
+                .contactUs ,#p01 , .contact_form , .contact_cotent , .register_content ,.button-container,
+                .foto ,.register_form , .register_p , .register_content , 
+                .foto, .form , .content , .button-container {
+            
+                    font-size: 4px;
+                }
+                
+                .footer-section, .footer-section_icons{
+                    font-size: 4px;
+                }
+            
+            }
+        
+    
