@@ -432,13 +432,14 @@ h1{
 
 .cozyStore_head h1{
     margin-top: 30px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
-    font-style: italic;
     color: sienna;
     text-align: center;
 }
 .cozyStore_head h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
     text-align: center;
     font-size: 30px
 }
@@ -458,7 +459,8 @@ h1{
     height: 500px;
     text-align: center;
     float: right;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
     font-size: 29px;
     color: brown;   
 }
@@ -501,20 +503,23 @@ h1{
 }
     
 .products .box-container .box .content h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:black;
     font-size: 2.5rem;
 }
     
 .products .box-container .box .content .stars{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
     padding: 1.5rem;
     color: sienna;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
     
     
 .products .box-container .box .content .price{
     color : black;
     font-size: 2.5rem;
+
 }
     
 .products .box-container .box .content .price span{
