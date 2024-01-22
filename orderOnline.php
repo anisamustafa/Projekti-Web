@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,12 +29,23 @@
             <p class="orderOnline_p"><b>TAKE YOUR COFFEE</b></p>
         </div>
 
-        <form action="" method="post">
+        <?php
+        if(isset($_POST["login"])){
+          $email = $_POST["email"];
+          $password = $_POST["password"];
+          require_once "pdo.php";
+          $sql = "SELECT * FROM user WHERE email = '$email'";
+          $result = mysqli_query($sql);
+
+        }
+        ?>
+
+        <form action = "orderOnline.php" method ="POST">
         <div class="form">
             <div class="content">
-                <label class="login_form" for="username"><b>Username:</b></label>
-                <input class="login_form_input" type="text" placeholder="Enter Username" name="username" required>
-                <p id="usernameError" class="error"></p>
+                <label class="login_form" for="email"><b>Email:</b></label>
+                <input class="login_form_input" type="email" placeholder="Enter Email" name="email" required>
+                <p id="emailError" class="error"></p>
             </div>
                 
             <div class="content">
@@ -43,30 +55,30 @@
             </div>
             
             <div class="button-container">
-                <button type="button" onclick="validateForm()">Log in</button>
+                <button type="button" onclick="validateForm()" name ="login">Log in</button>
                 </div>
                 <br>
-                <a href="registration.html" class="register-link">Not signed up ?
+                <a href="registration.php" class="register-link">Not signed up ?
                 <br>Sign up here</a> 
             </div>
           </form>
 
         <script>
-        let usernameRegex = /[a-z0-9]{9,15}$/;
+        let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         let passwordRegex = /^[A-Z][a-z0-9.,\-_]{8,}$/;
 
     function validateForm(){
-        let usernameInput = document.querySelector('input[name="username"]');
-        let usernameError = document.getElementById('usernameError');
+        let emailInput = document.querySelector('input[name="email"]');
+        let emailError = document.getElementById('emailError');
         
         let passwordInput = document.querySelector('input[name="password"]');
         let passwordError = document.getElementById('passwordError');
 
-        usernameError.innerText = '';
+        emailError.innerText = '';
         passwordError.innerText = '';
 
-        if(!usernameRegex.test(usernameInput.value)){
-        usernameError.innerText = 'Invalid username format';
+        if(!emailRegex.test(emailInput.value)){
+        usernameError.innerText = 'Invalid email format';
         return;
         }
 
