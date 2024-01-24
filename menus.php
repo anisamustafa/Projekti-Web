@@ -25,22 +25,10 @@
     
     
     <p id="p_menu">
-        Embark on a culinary voyage with our extraordinary menu, where the convergence of original coffee, delectable brunch croissants, bagels,
-        and exquisite cocktails creates a symphony of flavors that will transport you to gastronomic bliss. 
-        Begin your morning with the perfect cup of our meticulously crafted original coffee blends, sourced from the most coveted coffee beans worldwide. 
-        Complementing this liquid gold are our brunch croissants, flaky layers embracing a medley of flavors from savory to sweet, providing a sublime start to your day. 
-        Dive into the irresistible allure of our bagels, handcrafted and freshly baked, offering a canvas for a myriad of delectable toppings and spreads.
+        Begin your morning with the perfect cup of our meticulously crafted original coffee blends, sourced from the most coveted coffee beans worldwide.
     </p>
-    <h1 id="h1_menu">Menus</h1>
 
-    <div id="slideshow_all">
-        <header>
-        <h2>Our rich menu </h2>
-        <img id="slideshow_coffee" />
-        </header>
-        <button class = "button_slideshow"onclick="changeCoffee()">Next</button>
-    </div>
-    
+    <h1 id="h1_menu">Menus</h1>
 
     <main id="main5">
         
@@ -75,7 +63,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item_name">Ristretto</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">A 25ml espresso extracted in 17–18 seconds, served in an espresso cup.</p>
                 </div>
@@ -84,7 +72,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Machiatto</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">A single espresso in a 250ml cup , with steamed milk added almost to the top</p>
                 </div>
@@ -93,7 +81,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Flat White</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">A double espresso in a 250ml cup, with steamed milk added almost to the top</p>
                 </div>
@@ -102,16 +90,16 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Cortado</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
-                    <p class="item_p">a single espresso in a glass cup topped up with steamed milk</p>
+                    <p class="item_p">A single espresso in a glass cup topped up with steamed milk</p>
                 </div>
             </div>
             <div class="menu_item">
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Cappuccino</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                 <p class = "item_p">a double espresso in a 250ml cup topped up with steamed foamy milk</p>
             </div>
@@ -120,7 +108,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Latte</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">Espresso shot with added hot steamed milk, in a long cup</p>
                 </div>
@@ -129,7 +117,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Mocha</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">A double espresso shot with Montezumas organic dark chocolate flakes and 250ml milk</p>
                 </div>
@@ -157,7 +145,7 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Extras</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
                     <p class="item_p">Coconut Milk, Hazelnut Milk, Soy Milk (Bonsoy), Almond Milk, Oat Milk (Oatly)</p>
                 </div>
@@ -165,14 +153,24 @@
         </div>
     </div>
 
-    <div id="slideshow_all">
-        <header>
-        <h2>Our rich menu </h2>
-        <img id="slideshow_iced" />
-        </header>
-        <button class = "button_slideshow"onclick="changeIced()">Next</button>
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="image-list">
+                <img src="Menu_Photos/Esspreso.jpg" alt="img-1" class="image-item"> 
+                <img src="Menu_Photos/Machiato.jpg" alt="img-2" class="image-item"> 
+                <img src="Menu_Photos/Cortado.jpg" alt="img-3" class="image-item"> 
+                <img src="Menu_Photos/Mocha.jpg" alt="img-4" class="image-item"> 
+                <img src="Menu_Photos/HotChocolate.jpg" alt="img-5" class="image-item">
+                <img src="Menu_Photos/IcedAmericano.jpg" alt="img-6" class="image-item">  
+                <img src="Menu_Photos/IcedCafe.jpg" alt="img-7" class="image-item"> 
+            </div>
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
     </div>
-    
 
      
     <div class="menu">
@@ -206,7 +204,7 @@
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Iced Flat White</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">2.50 €</span>
                 </h3>
                 <p class="item_p">Iced coffee with more amount of milk ,served in different flavours (Caramel , Chocolate)</p>
             </div>
@@ -215,7 +213,7 @@
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item-name">Frappe</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">2.50 €</span>
                 </h3>
                 <p class="item_p">A single espresso in a 250ml cup , with steamed milk added almost to the top</p>
             </div>
@@ -224,7 +222,7 @@
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item-name">Cozy Cup Iced Coffee</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">2.50 €</span>
                 </h3>
                 <p class="item_p">A double espresso in a 250ml cup, with steamed milk added almost to the top</p>
             </div>
@@ -232,13 +230,23 @@
         </div>
     </div>
 
-
-    <div id="slideshow_all">
-        <header>
-        <h2>Our rich menu </h2>
-        <img id="slideshow_food"/>
-        </header>
-        <button class = "button_slideshow"onclick="changeFood()">Next</button>
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="image-list">
+                <img src="Menu_Photos/Bagel.jpg" alt="img-1" class="image-item"> 
+                <img src="Menu_Photos/BaconBagel.jpg" alt="img-2" class="image-item"> 
+                <img src="Menu_Photos/Croissants.jpg" alt="img-3" class="image-item"> 
+                <img src="Menu_Photos/Quesadilla.jpg" alt="img-4" class="image-item"> 
+                <img src="Menu_Photos/Minisandwiches.jpg" alt="img-5" class="image-item"> 
+                <img src="Menu_Photos/Chickencrunch.jpg" alt="img-6" class="image-item">
+                <img src="Menu_Photos/Club sandwich.jpg" alt="img-7" class="image-item">  
+            </div>
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
     </div>
 
     <div class="menu">
@@ -252,9 +260,9 @@
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item-name">Plain Bagel</span>
-                        <span class="item_price">1.20 €</span>
+                        <span class="item_price">1.50 €</span>
                     </h3>
-                    <p class="item_p">classic bagel with cheddar cheese, scrambled egg, salt & pepper</p>
+                    <p class="item_p">Classic bagel with cheddar cheese, scrambled egg, salt & pepper</p>
                 </div>
             </div>
        
@@ -264,7 +272,7 @@
                     <span class="item-name">Bacon Bagel</span>
                     <span class="item_price">1.50 €</span>
                 </h3>
-                <p class="item_p">crispy bacon slices, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Crispy bacon slices, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
       
@@ -272,18 +280,18 @@
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item-name">Mediteerranean Bagel</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">2.50 €</span>
                 </h3>
-                <p class="item_p">sun-dried tomato, bella mushroom, black olives, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Sun-dried tomato, bella mushroom, black olives, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
             <div class="menu_item">
                 <div class="item-info">
                     <h3 class="item_h3">
                         <span class="item_name">Cozy Cup Baggel</span>
-                        <span class="item_price">$2.50</span>
+                        <span class="item_price">2.50 €</span>
                     </h3>
-                    <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                    <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
                 </div>
             </div>
            
@@ -291,61 +299,72 @@
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Croissants</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">1.50 €</span>
                 </h3>
-                <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Quesadilla</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">4.00 €</span>
                 </h3>
-                <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Mini Sandwhiches</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">4.00 €</span>
                 </h3>
-                <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Chicken Crunch </span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">2.50 €</span>
                 </h3>
-                <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
                     <span class="item_name">Sandwhich Club</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_price">4.00 €</span>
                 </h3>
-                <p class="item_p">black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
+                <p class="item_p">Black forest ham, cheddar cheese, scrambled egg, salt & pepper</p>
             </div>
         </div>
     </div>
     </div>
-         
-    <div id="slideshow_all">
-        <header>
-        <h2>Our rich menu </h2>
-        <img id="slideshow_cocktail" />
-        </header>
-        <button class = "button_slideshow"onclick="changeImg()">Next</button>
+
+    <div class="container">
+        <div class="slider-wrapper">
+            <div class="image-list">
+                <img src="Menu_Photos/mojito.jpg" alt="img-1" class="image-item"> 
+                <img src="Menu_Photos/Cosmopolitan.jpg" alt="img-2" class="image-item"> 
+                <img src="Menu_Photos/sexonthebeach.jpg" alt="img-3" class="image-item"> 
+                <img src="Menu_Photos/margarita.jpg" alt="img-4" class="image-item"> 
+                <img src="Menu_Photos/tequilasunrise.jpg" alt="img-5" class="image-item"> 
+                <img src="Menu_Photos/bluelagoon.jpg" alt="img-6" class="image-item">
+                <img src="Menu_Photos/aperolspritz.jpg" alt="img-7" class="image-item">  
+            </div>
+        </div>
+        <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+            </div>
+        </div>
     </div>
     
     <div class="cocktails_menu">
         <div class="menu_name">
-            <h3 class="start_h3">cocktails</h3>
+            <h3 class="start_h3">Cocktails</h3>
         </div>
         <br>
         <br>
@@ -354,74 +373,74 @@
             <div class="menu_item">
                 <div class="item-info">
                     <h3 class="item_h3">
-                        <span class="item-name">Espresso</span>
-                        <span class="item_price">1.20 €</span>
+                        <span class="item-name">Mojito</span>
+                        <span class="item_price">7 €</span>
                     </h3>
-                    <p class="item_p">A single espresso is 25ml extracted in 27–30 seconds</p>
+                    <p class="item_p">Cuban rum,fresh mint,lemon,sugar and soda <br> Also with strawberry or passion fruit</p>
                 </div>
             </div>
        
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Americano</span>
-                    <span class="item_price">1.50 €</span>
+                    <span class="item-name">Cosmopolitan</span>
+                    <span class="item_price">5.50 €</span>
                 </h3>
-                <p class="item_p">Espresso with added hot water, creating a similar strength but different flavor from drip coffee.</p>
+                <p class="item_p">Vodka,cointreau,lemon and cranberry</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item_name">Ristretto</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item_name">Sex on the beach</span>
+                    <span class="item_price">7.50 €</span>
                 </h3>
-                <p class="item_p">A 25ml espresso extracted in 17–18 seconds, served in an espresso cup.</p>
+                <p class="item_p">Peach liqeur,vodka,orange and cranberry</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Machiatto</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item-name">Margarita</span>
+                    <span class="item_price">6.50 €</span>
                 </h3>
-                <p class="item_p">A single espresso in a 250ml cup , with steamed milk added almost to the top</p>
+                <p class="item_p">Tequila,cointreau and lemon</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Flat White</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item-name">Tequila sunrise</span>
+                    <span class="item_price">7 €</span>
                 </h3>
-                <p class="item_p">A double espresso in a 250ml cup, with steamed milk added almost to the top</p>
+                <p class="item_p">Tequila,orange and grenadine</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Cortado</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item-name">Blue Lagoon</span>
+                    <span class="item_price">6 €</span>
                 </h3>
-                <p class="item_p">a single espresso in a glass cup topped up with steamed milk</p>
+                <p class="item_p">Vodka,blue curacao and Sprite</p>
             </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Cappuccino</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item-name">Watermelon</span>
+                    <span class="item_price">7 €</span>
                 </h3>
-            <p class = "item_p">a double espresso in a 250ml cup topped up with steamed foamy milk</p>
+            <p class = "item_p">Watermelon syrup,pineapple,orange and lemon</p>
         </div>
         </div>
         <div class="menu_item">
             <div class="item-info">
                 <h3 class="item_h3">
-                    <span class="item-name">Latte</span>
-                    <span class="item_price">$2.50</span>
+                    <span class="item-name">Aperol Spritz</span>
+                    <span class="item_price">6.50 €</span>
                 </h3>
-                <p class="item_p">Espresso shot with added hot steamed milk, in a long cup</p>
+                <p class="item_p">Aperol,prosecco and soda Water</p>
             </div>
         </div>
       
@@ -479,69 +498,40 @@
 </html>
 
 <script>
-    let i = 0;
-    let coffeeArray = ['Photos/cup.jpg','Photos/aboutus.png',''];
-    let icedArray = ['Photos/cup.jpg','Photos/aboutus.png',''];
-    let foodArray = ['Menu_Photos/Bagel.jpg','Menu_Photos/Croissants.jpg','Menu_Photos/Quesadilla.jpg','Menu_Photos/Chickencrunch.jpg','Menu_Photos/Club sandwich.jpg'];
-    let cocktailsArray = ['',''];
+document.addEventListener("DOMContentLoaded", function () {
+    const containers = document.querySelectorAll('.container');
 
+    containers.forEach(container => {
+        const imageList = container.querySelector('.image-list');
+        const scrollbarThumb = container.querySelector('.scrollbar-thumb');
 
-    /**Coffee SlideShow*/
-    function changeCoffee(){
-        document.getElementById('slideshow_coffee').src =coffeeArray[i];
+        let isDragging = false;
 
-        if(i< coffeeArray.length -1){
-            i++;
+        scrollbarThumb.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            const startX = e.clientX - scrollbarThumb.getBoundingClientRect().left;
+
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', () => isDragging = false);
+
+            function handleMouseMove(e) {
+                if (isDragging) {
+                    const newThumbX = e.clientX - startX;
+                    const maxScroll = imageList.scrollWidth - imageList.clientWidth;
+                    const scrollPercentage = newThumbX / (imageList.clientWidth - scrollbarThumb.clientWidth);
+                    imageList.scrollLeft = scrollPercentage * maxScroll;
+                }
+            }
+        });
+
+        imageList.addEventListener('scroll', () => updateScrollbar());
+        window.addEventListener('resize', () => updateScrollbar());
+
+        function updateScrollbar() {
+            const maxScroll = imageList.scrollWidth - imageList.clientWidth;
+            const scrollPercentage = imageList.scrollLeft / maxScroll;
+            scrollbarThumb.style.left = `${scrollPercentage * (imageList.clientWidth - scrollbarThumb.clientWidth)}px`;
         }
-        else{
-            i=0;
-        }
-        setTimeout(changeCoffee, 10000000000);
-    }
-    document.addEventListener(onload, changeCoffee());
-    
-    /**Iced Coffe SlideShow*/
-    function changeIced(){
-        document.getElementById('slideshow_iced').src =icedArray[i];
-
-        if(i< icedArray.length -1){
-            i++;
-        }
-        else{
-            i=0;
-        }
-        setTimeout(changeIced, 10000000000);
-    }
-    document.addEventListener(onload, changeIced());
-
-    /** Food SlideShow*/
-    function changeFood(){
-        document.getElementById('slideshow_food').src =foodArray[i];
-
-        if(i< foodArray.length -1){
-            i++;
-        }
-        else{
-            i=0;
-        }
-        setTimeout(changeFood, 10000000000);
-    }
-    document.addEventListener(onload, changeFood());
-
-    /** Cocotail SlideShow*/
-    function changeCocktails(){
-        document.getElementById('slideshow_cocktail').src =cocktailsArray[i];
-
-        if(i< cocktailsArray.length -1){
-            i++;
-        }
-        else{
-            i=0;
-        }
-        setTimeout(changeCocktails, 10000000000);
-    }
-    document.addEventListener(onload, changeCocktails());
-
-
+    });
+});
 </script>
-

@@ -9,53 +9,100 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="Photos/Logo for web.png" alt="Logo">
         </a>
         <nav>
            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="menus.html">Menus</a></li>
-            <li><a href="cozyStore.html">Cozy Store</a></li>
-            <li><a href="orderOnline.html">Order Online</a></li>
-            <li><a href="contactUs.html">Contact us</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutUs.php">About us</a></li>
+            <li><a href="menus.php">Menus</a></li>
+            <li><a href="cozyStore.php">Cozy Store</a></li>
+            <li><a href="orderOnline.php">Order Online</a></li>
+            <li><a href="contactUs.php">Contact us</a></li>
            </ul>
         </nav>
     </header>
     <main id="main1">
+      
         <div class="foto">
             <img src="Photos/orderonline.png" alt="orderOnline">
             <p class="orderOnline_p"><b>TAKE YOUR COFFEE</b></p>
         </div>
 
+       
+
         <?php
-        if(isset($_POST["login"])){
-          $email = $_POST["email"];
-          $password = $_POST["password"];
-          require_once "pdo.php";
-          $sql = "SELECT * FROM user WHERE email = '$email'";
-          $result = mysqli_query($sql);
+include_once 'PhP/DatabaseConnection.php'; 
 
-        }
-        ?>
+class LoginController {
+    private $connection;
 
-        <form action = "orderOnline.php" method ="POST">
+    public function __construct() {
+        $conn = new DatabaseConnection;
+        $this->connection = $conn->startConnection();
+    }
+
+    public function loginUser($username, $password) {
+      $conn = $this->connection;
+  
+      if ($conn === null) {
+          die("Error: Database is null");
+      }
+  
+      $sql = "SELECT * FROM users WHERE username=?";
+      $statement = $conn->prepare($sql);
+      $statement->execute([$username]);
+      $user = $statement->fetch();
+  
+      if ($user) {
+          // User found, check the password
+          if (password_verify($password, $user['password'])) {
+              // Passwords match, user is authenticated
+              session_start();
+              $_SESSION['username'] = $username;
+              echo "Login successful!";
+              header("Location: index.php");
+              exit();
+          } else  {
+              //Password doesn't match
+             echo "Invalid password";
+          }
+      } else {
+          // User not found
+         echo "User not found";
+      }
+  }
+}
+  
+
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $loginController = new LoginController();
+        $loginController->loginUser($username, $password);
+    }
+?>
+
+
+
+        <form action ="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
         <div class="form">
             <div class="content">
-                <label class="login_form" for="email"><b>Email:</b></label>
-                <input class="login_form_input" type="email" placeholder="Enter Email" name="email" required>
-                <p id="emailError" class="error"></p>
+                <label class="login_form" for="username"><b>Username</b></label>
+                <input class="login_form_input" type="text" placeholder="Enter Username" name="username" required>
+                <p id="usernameError" class="error"></p>
             </div>
                 
             <div class="content">
-                <label class="login_form" for="password"><b>Password:</b></label>
+                <label class="login_form" for="password"><b>Password</b></label>
                 <input class="login_form_input"type ="password" placeholder="Enter Password" name="password" required>
                 <p id="passwordError" class="error"></p>
             </div>
             
             <div class="button-container">
-                <button type="button" onclick="validateForm()" name ="login">Log in</button>
+                <button type="submit" name="login" onclick="validateForm()">Log in</button>
                 </div>
                 <br>
                 <a href="registration.php" class="register-link">Not signed up ?
@@ -64,21 +111,22 @@
           </form>
 
         <script>
-        let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        let passwordRegex = /^[A-Z][a-z0-9.,\-_]{8,}$/;
+       
+      let usernameRegex = /^[a-zA-Z0-9._-]{4,15}$/;
+      let passwordRegex = /^[a-zA-Z0-9.,\-_]{8,}$/;
 
     function validateForm(){
-        let emailInput = document.querySelector('input[name="email"]');
-        let emailError = document.getElementById('emailError');
+        let usernameInput = document.querySelector('input[name="username"]');
+        let usernameError = document.getElementById('usernameError');
         
         let passwordInput = document.querySelector('input[name="password"]');
         let passwordError = document.getElementById('passwordError');
 
-        emailError.innerText = '';
+        usernameError.innerText = '';
         passwordError.innerText = '';
 
-        if(!emailRegex.test(emailInput.value)){
-        usernameError.innerText = 'Invalid email format';
+        if(!usernameRegex.test(usernameInput.value)){
+        usernameError.innerText = 'Invalid username format';
         return;
         }
 

@@ -8,17 +8,17 @@
 </head>
 <body>
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img src="Photos/Logo for web.png" alt="Logo">
         </a>
         <nav>
            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="menus.html">Menus</a></li>
-            <li><a href="cozyStore.html">Cozy Store</a></li>
-            <li><a href="orderOnline.html">Order Online</a></li>
-            <li><a href="contactUs.html">Contact us</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutUs.php">About us</a></li>
+            <li><a href="menus.php">Menus</a></li>
+            <li><a href="cozyStore.php">Cozy Store</a></li>
+            <li><a href="orderOnline.php">Order Online</a></li>
+            <li><a href="contactUs.php">Contact us</a></li>
            </ul>
         </nav>
     </header>
@@ -33,39 +33,29 @@
                 Sign up :
                 <br>
             </p>
-            <?php
-            if(isset($_POST["submit"])){
-                
-                $name = $_POST["name"];
-                $surname = $_POST["surname"];
-                $email = $_POST["email"];
-                $password = $_POST["password"];
-                $repeatPassword = $_POST["repeatPassword"];
+            
+        
+            <?php 
+            include_once 'php/registerController.php';
+    
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $surname = $_POST['surname'];
+            $email = $_POST['email'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $_repeatPassword = $_POST['repeatPassword'];
 
-                $passwordHash = password_hash($password , PASSWORD_DEFAULT);
+            $user = new User($id, $name, $surname, $email,$_repeatPassword,$password, $repeatPassword);
 
-                $errors = array();
-                if($password!==$repeatPassword){
-                    array_push($errors , "Password does not match");
-                }else{
-                    require_once "pdo.php";
-
-                    $dbConnect = new dbConnect();
-                    $conn = $dbConnect->connectDB();
-                    
-                    $sql = "INSERT INTO users (name, surname, email, password) VALUES (?, ?, ?, ?)";
-                    $statement = $conn->prepare($sql);
-                    
-                    if ($statement) {
-                        $statement->execute([$name, $surname, $email, $passwordHash]);
-                        echo "<div class='alert alert-success'>You are registered successfully.</div>";
-                    } else {
-                        die("Something went wrong!");
-                    }
-            }
+            $userRepository = new UserRepository();
+            $userRepository->insertUser($user);
+            header("location:index.php");
         }
-            ?>
-            <form action ="registration.php" method="post">
+         ?>
+        
+            
+            <form action ="" method="post">
             <div class="register_content">
                 <label class="register_label" for="name"><b>Name :</b><br><br></label>
                 <input class="register_input" type="text" placeholder="Enter Name" name="name" required>
@@ -85,6 +75,12 @@
             </div>
 
             <div class="register_content">
+                <label for="Username"><b>Username : </b><br><br></label>
+                <input class="register_input"  type="text" placeholder="Enter Username" name="username" required>
+                <p id="emailError" class="error"></p>
+            </div>
+
+            <div class="register_content">
                 <label for="Password"><b>Password :</b><br><br></label>
                 <input  class="register_input" type="password" placeholder="Enter Password" name="password" required>
                 <p id="passwordError" class="error"></p>
@@ -97,8 +93,9 @@
             </div>
 
             <div class="button-container">
-            <button type="submit" name="submit">Sign up</button>
-        </div>
+            <button type="submit" name="submit" onclick="registerForm()">Sign up</button>
+            </div>
+    </div>
         </form>
 
         <script>
