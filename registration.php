@@ -8,17 +8,30 @@
 </head>
 <body>
     <header class="header">
+<<<<<<< HEAD
         <a href="index.html" class="logo">
+=======
+        <a href="index.php" class="logo">
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
             <img src="Photos/Logo for web.png" alt="Logo">
         </a>
         <nav>
            <ul>
+<<<<<<< HEAD
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About us</a></li>
             <li><a href="menus.html">Menus</a></li>
             <li><a href="cozyStore.html">Cozy Store</a></li>
             <li><a href="orderOnline.html">Order Online</a></li>
             <li><a href="contactUs.html">Contact us</a></li>
+=======
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutUs.php">About us</a></li>
+            <li><a href="menus.php">Menus</a></li>
+            <li><a href="cozyStore.php">Cozy Store</a></li>
+            <li><a href="orderOnline.php">Order Online</a></li>
+            <li><a href="contactUs.php">Contact us</a></li>
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
            </ul>
         </nav>
     </header>
@@ -33,6 +46,32 @@
                 Sign up :
                 <br>
             </p>
+<<<<<<< HEAD
+=======
+            
+        
+            <?php 
+            include_once 'php/registerController.php';
+    
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $surname = $_POST['surname'];
+            $email = $_POST['email'];
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+            $_repeatPassword = $_POST['repeatPassword'];
+
+            $user = new User($id, $name, $surname, $email,$_repeatPassword,$password, $repeatPassword);
+
+            $userRepository = new UserRepository();
+            $userRepository->insertUser($user);
+            header("location:index.php");
+        }
+         ?>
+        
+            
+            <form action ="" method="post">
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
             <div class="register_content">
                 <label class="register_label" for="name"><b>Name :</b><br><br></label>
                 <input class="register_input" type="text" placeholder="Enter Name" name="name" required>
@@ -52,21 +91,48 @@
             </div>
 
             <div class="register_content">
+<<<<<<< HEAD
+=======
+                <label for="Username"><b>Username : </b><br><br></label>
+                <input class="register_input"  type="text" placeholder="Enter Username" name="username" required>
+                <p id="emailError" class="error"></p>
+            </div>
+
+            <div class="register_content">
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
                 <label for="Password"><b>Password :</b><br><br></label>
                 <input  class="register_input" type="password" placeholder="Enter Password" name="password" required>
                 <p id="passwordError" class="error"></p>
             </div>
 
+<<<<<<< HEAD
             <div class="button-container">
                 <button type="button" onclick="registerForm()">Sign up</button>
             </div>
         </div>
+=======
+            <div class="register_content">
+                <label for="Password"><b>Repeat Password :</b><br><br></label>
+                <input  class="register_input" type="password" placeholder="Repeat Password" name="repeatPassword" required>
+                <p id="repeatPasswordError" class="error"></p>
+            </div>
+
+            <div class="button-container">
+            <button type="submit" name="submit" onclick="registerForm()">Sign up</button>
+            </div>
+    </div>
+        </form>
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
 
         <script>
         let nameRegex = /^[a-zA-Z]{4,15}$/;
         let surnameRegex = /^[a-zA-Z]{4,15}$/;
         let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         let passwordRegex = /^[A-Za-z0-9.,\-_]{8,}$/;
+<<<<<<< HEAD
+=======
+        let repeatPasswordRegex = /^[A-Za-z0-9.,\-_]{8,}$/;
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
 
 
 function registerForm() {
@@ -82,10 +148,21 @@ function registerForm() {
     let passwordInput = document.querySelector('input[name="password"]');
     let passwordError = document.getElementById('passwordError');
 
+<<<<<<< HEAD
+=======
+    let repeatPasswordInput = document.querySelector('input[name="repeatPassword"]');
+    let repeatPasswordError = document.getElementById('repeatPasswordError');
+
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
     nameError.innerText = '';
     surnameError.innerText = '';
     emailError.innerText = '';
     passwordError.innerText = '';
+<<<<<<< HEAD
+=======
+    repeatPasswordError.innerText = '';
+    
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
 
     if (!nameRegex.test(nameInput.value)) {
         nameError.innerText = 'Invalid name format';
@@ -103,9 +180,20 @@ function registerForm() {
     }
 
     if (!passwordRegex.test(passwordInput.value)) {
+<<<<<<< HEAD
         passwordError.innerText = 'Invalid password format';
         return;
     }
+=======
+        passwordError.innerText = 'Invalid password format ';
+        return;
+    }
+    if (!repeatPasswordRegex.test(repeatPasswordInput.value)) {
+        repeatPasswordError.innerText = 'Password does not match';
+        return;
+    }
+
+>>>>>>> 0d6cd8ae31a2d628cadfdee697ca2a62c769ad5b
 
         alert('Successfully signed up!');
 }
