@@ -13,12 +13,12 @@
         </a>
         <nav>
            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutUs.html">About us</a></li>
-            <li><a href="menus.html">Menus</a></li>
-            <li><a href="cozyStore.html">Cozy Store</a></li>
-            <li><a href="orderOnline.html">Order Online</a></li>
-            <li><a href="contactUs.html">Contact us</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutUs.php">About us</a></li>
+            <li><a href="menus.php">Menus</a></li>
+            <li><a href="cozyStore.php">Cozy Store</a></li>
+            <li><a href="orderOnline.php">Order Online</a></li>
+            <li><a href="contactUs.php">Contact us</a></li>
            </ul>
         </nav>
     </header>

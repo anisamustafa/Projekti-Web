@@ -46,11 +46,12 @@
             $password = $_POST['password'];
             $_repeatPassword = $_POST['repeatPassword'];
 
-            $user = new User($id, $name, $surname, $email,$_repeatPassword,$password, $repeatPassword);
-
+            /*
+            $user = new User($name, $surname, $email,$username,$password, $repeatPassword);
             $userRepository = new UserRepository();
             $userRepository->insertUser($user);
-            header("location:index.php");
+            */
+            header("location: index.php");
         }
          ?>
         

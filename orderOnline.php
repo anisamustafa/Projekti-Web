@@ -31,58 +31,76 @@
         </div>
 
        
-
-        <?php
-include_once 'PhP/DatabaseConnection.php'; 
-
-class LoginController {
-    private $connection;
-
-    public function __construct() {
-        $conn = new DatabaseConnection;
-        $this->connection = $conn->startConnection();
-    }
-
-    public function loginUser($username, $password) {
-      $conn = $this->connection;
-  
-      if ($conn === null) {
-          die("Error: Database is null");
-      }
-  
-      $sql = "SELECT * FROM users WHERE username=?";
-      $statement = $conn->prepare($sql);
-      $statement->execute([$username]);
-      $user = $statement->fetch();
-  
-      if ($user) {
-          // User found, check the password
-          if (password_verify($password, $user['password'])) {
-              // Passwords match, user is authenticated
-              session_start();
-              $_SESSION['username'] = $username;
-              echo "Login successful!";
-              header("Location: index.php");
-              exit();
-          } else  {
-              //Password doesn't match
-             echo "Invalid password";
-          }
-      } else {
-          // User not found
-         echo "User not found";
-      }
-  }
+<?php
+session_start();
+ 
+ 
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+    header("location: php/Logged_IN/welcome.php");
+    exit;
 }
-  
 
-    if (isset($_POST['login'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+include "PhP/DatabaseConnection.php";
+ 
 
-        $loginController = new LoginController();
-        $loginController->loginUser($username, $password);
+
+$username = $password = $login_err = "";
+ 
+
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+
+  $conn = new DatabaseConnection;
+  $pdo = $conn->startConnection();
+
+  $sql = "SELECT id, username, password ,role FROM users WHERE username = :username";
+
+$statement = $pdo->prepare($sql);
+
+  if($statement){
+      $statement->bindParam(":username", $param_username, PDO::PARAM_STR);
+      $param_username = $username;
+
+      if($statement->execute()){
+          if($statement->rowCount() == 1){
+              $row = $statement->fetch();
+              $id = $row["id"];
+              $stored_password = $row["password"];
+              $user_role = $row["role"];
+              
+              if($password == $stored_password){
+                  session_start();
+                  $_SESSION["loggedin"] = true;
+                  $_SESSION["id"] = $id;
+                  $_SESSION["username"] = $username;
+                  $_SESSION["role"] = $user_role;
+
+                  if ($user_role == 'admin') {
+                    header("location: PhP/dashboard.php"); 
+                    exit;
+                } else {
+                    header("location: index.php"); 
+                    exit;
+                }
+            } else {
+                $login_err = "Invalid username or password.";
+            }
+        } else {
+            $login_err = "Invalid username or password.";
+        }
+    } else {
+        echo "Oops! Something went wrong. Please try again later.";
     }
+
+    unset($statement);
+} else {
+    die("Error: " . $pdo->error);
+}
+
+unset($pdo);
+}
 ?>
 
 
