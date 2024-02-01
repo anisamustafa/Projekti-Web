@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cozy Store</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     <header class="header">
         <a href="index.php" class="logo">
-            <img src="Photos/Logo for web.png" alt="Logo">
+            <img src="../../Photos/Logo for web.png" alt="Logo">
         </a>
         <nav>
            <ul>
@@ -30,7 +30,7 @@
             
             <div class="store_start">
 
-                <img src="Photos/store.jpg" alt="Store">
+                <img src="../../Photos/store.jpg" alt="Store">
                 <h3>At Cozy Cup, we are committed to delivering freshness and authenticity in every bean. Our beans are ethically sourced, 
                 ensuring that the farmers behind each harvest are treated with fairness and respect. From the moment the beans are picked to the careful roasting process,
                 we prioritize quality at every step. Whether you savor your coffee as a daily ritual or indulge in special moments, our coffee beans promise to awaken your 
@@ -42,7 +42,11 @@
                 with a delicious strong flavor and a unique type of beans , straight out of the Ethiopia fields , directly to your cup. 
             </h3>
   <?php          
-include_once 'php/Products/productsRepository.php';
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
+  
+include_once 'productsRepository.php';
+include_once '../DatabaseConnection.php';
 
 $productsRepository = new ProductsRepository();
 $products = $productsRepository->getAllProducts();
@@ -51,16 +55,16 @@ $products = $productsRepository->getAllProducts();
 <div class="products">
 
 <?php foreach ($products as $product): ?>
-        <div class="product-box">
-        <img src="<?php echo './' . $product['product_image']; ?>" alt="<?php echo $product['product_name']; ?>">
-            <div class="product-details">
-                <h2><?php echo $product['product_name']; ?></h2>
-                <p><?php echo $product['product_description']; ?></p>
-                <p>Price: <?php echo $product['product_price'];  ?> € </p>
-                <span class="discount"><span style="text-decoration: line-through;"><?php echo $product['product_discount']; ?></span>
-            </div>
+    <div class="product-box">
+        <img src="<?php echo $product['product_image']; ?>" alt="<?php echo $product['product_name']; ?>">
+        <div class="product-details">
+            <h2><?php echo $product['product_name']; ?></h2>
+            <p><?php echo $product['product_description']; ?></p>
+            <p>Price: <?php echo $product['product_price']; ?> € </p>
+            <span class="discount"><span style="text-decoration: line-through;"><?php echo $product['product_discount']; ?></span></span>
         </div>
-    <?php endforeach; ?>
+    </div>
+<?php endforeach;?>
 </div>
 
     </main>

@@ -427,28 +427,28 @@ h1{
     margin-top: 100px;
 
 }
-.cozyStore_head{
+#main2 .cozyStore_head{
     margin-top: 100px;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
 }
 
-.cozyStore_head h1{
+#main2 .cozyStore_head h1{
     margin-top: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     text-align: center;
     color: black;
 }
-.cozyStore_head h3{
+#main2 .cozyStore_head h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(180, 127, 103);
     font-style: italic;
     text-align: center;
     font-size: 30px
 }
-.store_start img{
+#main2 .store_start img{
     float: left;
     width: 600px;
     height: 500px;
@@ -456,7 +456,7 @@ h1{
     
 }
 
-.store_start h3{
+#main2 .store_start h3{
     margin-top: 90px;
     margin-left: 20px;
     padding: 12px;
@@ -468,85 +468,6 @@ h1{
     font-style: italic;
     font-size: 29px;
     color: rgb(180, 127, 103);
-}
-
-
-.products .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:1.5rem;
-}
-    
-.products .box-container .box{
-    text-align: center;
-    border: #f8a529;
-    padding: 2rem;
-}
-    
-.products .box-container .box .icons a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color:black;
-    margin:.3rem;
-}
-    
-.products .box-container .box .icons a:hover{
-    color: #fab958;
-}
-    
-.products .box-container .box .image{
-    padding: 2.5rem 0;
-}
-    
-.products .box-container .box .image img{
-    height: 300px;
-    width: 300px;
-}
-    
-.products .box-container .box .content h3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:black;
-    font-size: 2.5rem;
-}
-    
-.products .box-container .box .content .stars{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
-    padding: 1.5rem;
-    color: sienna;
-}
-    
-    
-.products .box-container .box .content .price{
-    color : black;
-    font-size: 2.5rem;
-
-}
-    
-.products .box-container .box .content .price span{
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
-}
-
-#addToCartButton{
-    background-color: burlywood;
-    color: saddlebrown;
-    width: 100px;
-    height: 50px;
-    border: 3px solid #fab958;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.6s ease;
-}
-    
-#addToCartButton:hover{
-    color: burlywood;
-    background-color: sienna;
 }
 
 /*Contact Us */
