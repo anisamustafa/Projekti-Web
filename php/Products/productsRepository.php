@@ -1,28 +1,97 @@
 <?php
+include_once (__DIR__ . '/../DatabaseConnection.php');
 
-require_once '../DatabaseConnection.php';
-require_once 'Products.php';
-require_once 'Cart.php';
+class ProductsRepository {
+    private $connection;
 
-$database = new DatabaseConnection();
-$connection = $database->startConnection();
+    public function __construct() {
+        $conn = new DatabaseConnection;
+        $this->connection = $conn->startConnection();
+    }
 
-$product = new Product('Classic 250g Arabica', 8.99, 4.0, '../../Photos/250_beans.png');
+    public function insertProducts($product) {
+        $conn = $this->connection;
 
-$cart = new Cart();
+        $product_id = $product->getProductId();
+        $product_name = $product->getProductName();
+        $product_description = $product->getProductDescription();
+        $product_price = $product->getProductPrice();
+        $product_discount = $product->getProductDiscount();
+        $product_image = $product->getProductImage();
 
-$cart->addProduct($product);
+        $sql = "INSERT INTO products (product_id, product_name, product_description, product_price, product_discount, product_image) VALUES (?, ?, ?, ?, ?, ?)";
 
-echo "Cart Contents:\n";
-foreach ($cart->getProducts() as $product) {
-    echo "Product: {$product->getProductName()}, Price: {$product->calculateDiscountedPrice()}\n";
-}
+        $statement = $conn->prepare($sql);
+        if (!$statement) {
+            die("Error" . $conn->error);
+        }
+        $statement->execute([$product_id, $product_name, $product_description, $product_price, $product_discount, $product_image]);
 
-try {
-    $stmt = $connection->prepare("INSERT INTO products (product_name, product_price, product_discount, product_image) VALUES (?, ?, ?, ?)");
-    $stmt->execute([$product->getProductName(), $product->getProductPrice(), $product->getProductDiscount(), $product->getProductImage()]);
-    echo "Product saved to database.\n";
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
+        // Log the product addition action
+        $this->logProductAction('Inserted product with name', $product_name);
+    }
+
+    public function getAllProducts() {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM products";
+
+        $statement = $conn->query($sql);
+        $products = $statement->fetchAll();
+
+        return $products;
+    }
+
+    public function getProductById($id) {
+        $conn = $this->connection;
+
+        $sql = "SELECT * FROM products WHERE product_id=?";
+
+        $statement = $conn->prepare($sql);
+        $statement->execute([$id]);
+        $product = $statement->fetch();
+
+        return $product;
+    }
+
+    public function updateProduct($product_id, $product_name, $product_description, $product_price, $product_discount, $product_image) {
+        $conn = $this->connection;
+
+        $sql = "UPDATE products SET product_name=?, product_description=?, product_price=?, product_discount=?, product_image=? WHERE product_id=?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$product_name, $product_description, $product_price, $product_discount, $product_image, $product_id]);
+
+        echo "<script>alert('Update was successful');</script>";
+    }
+
+    public function deleteProducts($id) {
+        $conn = $this->connection;
+
+        $sql = "DELETE FROM products WHERE product_id=?";
+
+        $statement = $conn->prepare($sql);
+
+        $statement->execute([$id]);
+
+        echo "<script>alert('Delete was successful');</script>";
+    }
+
+    public function logProductAction($action, $productName) {
+        $conn = $this->connection;
+
+        $adminUsername = "admin"; // Replace with the actual admin username
+        $actionDescription = "Admin '{$adminUsername}' {$action} with product '{$productName}'";
+
+        $sql = "INSERT INTO modifikimet (admin_username, action_type, action_description) VALUES (?, 'product_action', ?)";
+
+        $statement = $conn->prepare($sql);
+        if (!$statement) {
+            die("Error" . $conn->error);
+        }
+
+        $statement->execute([$adminUsername, $actionDescription]);
+    }
 }
 ?>
